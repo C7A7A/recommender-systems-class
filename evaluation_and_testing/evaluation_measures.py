@@ -11,8 +11,12 @@ def rmse(r_pred, r_real):
     return np.sqrt(np.sum(np.power(r_pred - r_real, 2)) / len(r_pred))
 
 
-def mape(r_pred, r_real):
+def mre(r_pred, r_real):
     return 1 / len(r_pred) * np.sum(np.abs(r_pred - r_real) / np.abs(r_real))
+
+
+def mape(r_pred, r_real):
+    return mre(r_pred, r_real)
 
 
 def tre(r_pred, r_real):
