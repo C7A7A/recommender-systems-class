@@ -68,12 +68,12 @@ class RandomRecommender(Recommender):
 
 class MostPopularRecommender(Recommender):
     """
-    Base recommender class.
+    Most popular recommender class.
     """
 
     def __init__(self):
         """
-        Initialize base recommender params and variables.
+        Initialize recommender params and variables.
         """
         super().__init__()
         self.most_popular_items = None
@@ -121,12 +121,12 @@ class MostPopularRecommender(Recommender):
 
 class HighestRatedRecommender(Recommender):
     """
-    Base recommender class.
+    Highest rated recommender class.
     """
 
     def __init__(self):
         """
-        Initialize base recommender params and variables.
+        Initialize recommender params and variables.
         """
         super().__init__()
         self.offer_ratings = None
