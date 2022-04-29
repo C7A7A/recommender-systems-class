@@ -16,7 +16,7 @@ class DatasetSpecification(object):
     # ################
 
     def get_sum_columns(self):
-        return ["n_people", "n_children_1", "n_children_2", "n_children_3", "accomodation_price", "meal_price",
+        return ["n_people", "n_children_1", "n_children_2", "n_children_3", "accommodation_price", "meal_price",
                 "service_price", "paid", "n_rooms"]
 
     def get_mean_columns(self):
