@@ -91,7 +91,8 @@ class NetflixRecommender(Recommender):
         self.user_id_reverse_mapping = dict(zip(list(range(len(unique_user_ids))), unique_user_ids))
 
         interactions_df = interactions_df.copy()
-        interactions_df.replace({'item_id': self.item_id_mapping, 'user_id': self.user_id_mapping}, inplace=True)
+        interactions_df['item_id'] = interactions_df['item_id'].map(self.item_id_mapping)
+        interactions_df['user_id'] = interactions_df['user_id'].map(self.user_id_mapping)
 
         # Get the number of items and users
 
@@ -245,7 +246,7 @@ class NetflixRecommender(Recommender):
 
         items_df = items_df.copy()
         items_df = items_df.loc[items_df['item_id'].isin(self.item_id_mapping)]
-        items_df.replace({'item_id': self.item_id_mapping}, inplace=True)
+        items_df['item_id'] = items_df['item_id'].map(self.item_id_mapping)
 
         # Generate recommendations
 
